@@ -1,0 +1,602 @@
+/* ================================
+   Home Page Specific Styles
+   Extracted from inline styles
+   ================================ */
+
+html, body {
+   overflow-x: hidden !important;
+   max-width: 100vw !important;
+}
+
+.brand-name {
+   font-family: "Geist", sans-serif;
+   font-weight: 900;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-57.5%, -50%);
+   z-index: 2;
+   pointer-events: none;
+   display: flex;
+   gap: 26em;
+   margin-right: 20em;
+}
+
+.brand-name h1 {
+   font-size: clamp(60px, 7vw, 160px);
+   font-weight: 900;
+   letter-spacing: -0.05em;
+   margin: 0;
+   white-space: nowrap;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   background-clip: text;
+}
+
+.word-left {
+   margin-right: 1rem;
+   background: #E91E8C !important;
+   opacity: 100% !important;
+   font-family: "Geist", sans-serif !important;
+   -webkit-background-clip: text !important;
+   -webkit-text-fill-color: transparent !important;
+   background-clip: text !important;
+}
+
+.word-right {
+   background: #F7941D !important;
+   opacity: 100% !important;
+   font-family: "Geist", sans-serif !important;
+   -webkit-background-clip: text !important;
+   -webkit-text-fill-color: transparent !important;
+   background-clip: text !important;
+}
+
+.brand-name .word-left {
+   animation: slideInFromLeft 1.2s ease-out forwards;
+}
+
+.brand-name .word-right {
+   animation: slideInFromRight 1.2s ease-out forwards;
+}
+
+@keyframes slideInFromLeft {
+   0% {
+      transform: translateX(-100vw);
+      opacity: 0;
+   }
+
+   100% {
+      transform: translateX(0);
+      opacity: 0.7;
+   }
+}
+
+@keyframes slideInFromRight {
+   0% {
+      transform: translateX(100vw);
+      opacity: 0;
+   }
+
+   100% {
+      transform: translateX(0);
+      opacity: 0.7;
+   }
+}
+
+@media (max-width: 768px) {
+   .brand-name h1 {
+      font-size: clamp(40px, 10vw, 100px);
+   }
+}
+
+@media (max-width: 480px) {
+   .brand-name h1 {
+      font-size: clamp(30px, 8vw, 70px);
+   }
+}
+
+/* Navbar animation
+ .navbar {
+     animation: slideDownNavbar 0.8s ease-out forwards;
+ } */
+
+@keyframes slideDownNavbar {
+   0% {
+      transform: translateY(-100%);
+      opacity: 0;
+   }
+
+   100% {
+      transform: translateY(0);
+      opacity: 1;
+   }
+}
+
+/* Phone mockup animation */
+.hero-v3-app {
+   animation: slideUpPhone 1s ease-out 0.3s forwards;
+   opacity: 0;
+}
+
+@keyframes slideUpPhone {
+   0% {
+      transform: translateY(100vh);
+      opacity: 0;
+   }
+
+   100% {
+      transform: translateY(0);
+      opacity: 1;
+   }
+}
+
+/* Circles animation */
+.hero-circles-wrapper-v3 {
+   animation: slideUpCircles 1.2s ease-out 0.5s forwards;
+   opacity: 0;
+}
+
+@keyframes slideUpCircles {
+   0% {
+      transform: translateY(100vh);
+      opacity: 0;
+   }
+
+   100% {
+      transform: translateY(0);
+      opacity: 1;
+   }
+}
+
+/* Hero Center Content Staggered Animations */
+.hero-section-center-holder {
+   position: relative;
+}
+
+/* Main heading - "UNLOCK STUDENT DISCOUNTS" */
+.hero-center-text {
+   animation: slideUpFadeIn 0.8s ease-out 0.6s forwards;
+   opacity: 0;
+   transform: translateY(60px);
+}
+
+/* Subheading - "VERIFY. DISCOVER. REDEEM." */
+.center-hero-paragraph-holder {
+   animation: slideUpFadeIn 0.8s ease-out 0.85s forwards;
+   opacity: 0;
+   transform: translateY(60px);
+}
+
+/* CTA Button - "JOIN THE UNI-VERSE" */
+.hero-form {
+   animation: slideUpFadeIn 0.8s ease-out 1.1s forwards;
+   opacity: 0;
+   transform: translateY(60px);
+}
+
+@keyframes slideUpFadeIn {
+   0% {
+      transform: translateY(60px);
+      opacity: 0;
+   }
+   100% {
+      transform: translateY(0);
+      opacity: 1;
+   }
+}
+
+/* ================================
+    Full Width Navbar Styles
+    ================================ */
+
+/* Full width navbar */
+.navbar.w-nav {
+   width: 100% !important;
+   transform: none !important;
+   margin-left: 0 !important;
+   left: 0 !important;
+   right: 0 !important;
+}
+
+.navbar-holder {
+   width: 100% !important;
+   max-width: 100% !important;
+}
+
+/* Keep nav links in their position */
+.nav-links {
+   margin-right: 50px !important;
+   
+} 
+
+.container.navbar-container {
+   width: 100% !important;
+   max-width: 100% !important;
+   padding-left: 0 !important;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+   .footer-wrapper {
+      flex-direction: column !important;
+      gap: 40px !important;
+   }
+
+   .footer-content {
+      grid-template-columns: 1fr !important;
+      gap: 30px !important;
+   }
+
+   .container {
+      width: 100% !important;
+      padding-left: 1em !important;
+      padding-right: 1em !important;
+   }
+
+   .grey-link {
+      font-size: 14px;
+   }
+   .brand-name{
+      display: none !important;
+   }
+   .navbar-container{
+      padding-left: 10px !important;
+      padding-right: 10px !important;
+      
+   }
+}
+
+/* Fix trustbar text on mobile */
+.trustbar-kicker {
+   font-size: 14px !important;
+   text-align: center !important;
+   white-space: normal !important;
+   line-height: 1.4 !important;
+   padding: 0 10px !important;
+}
+
+
+.trustbar-inner {
+   width: 100% !important;
+   flex-direction: column !important;
+   gap: 15px !important;
+   padding: 20px 10px !important;
+}
+
+.trustbar-logos {
+   width: 100% !important;
+   justify-content: center !important;
+   flex-wrap: wrap !important;
+}
+
+input,
+textarea,
+select {
+  font-family: "Geist", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+}
+
+
+/* ================================
+   Custom Overrides for How it Works Section
+   ================================ */
+
+#Features-homepage .section-center-text {
+  margin-top: 0 !important;
+  margin-bottom: 32px;
+}
+
+#Features-homepage .container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Ensure custom styles override default alignment */
+#Features-homepage * {
+  text-align: inherit;
+}
+
+
+/* ================================
+   CTA Section - Remove Extra Spacing
+   ================================ */
+
+.section.overflow-hidden[data-w-id="8ed71055-6ae7-5324-a6d4-54fc76e0e2d9"] {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+/* Footer Section - Remove Extra Spacing */
+.section.overflow-hidden+.section {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+/* CTA Section - Align button to the left */
+.cta-form-holder .form-block .form-holder {
+  align-items: flex-start;
+}
+
+/* ================================
+   Hamburger Menu Styles
+   ================================ */
+
+/* Hide hamburger on desktop */
+.menu-cart-holder {
+  display: none;
+}
+
+/* Show hamburger on mobile */
+@media (max-width: 991px) {
+  .menu-cart-holder {
+    display: flex !important;
+    align-items: center;
+    margin-left: auto;
+  }
+
+  .menu-button,
+  .w-nav-button {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  .w-icon-nav-menu {
+    color: white !important;
+    font-size: 28px !important;
+  }
+
+  /* Hide desktop nav on mobile */
+  .navbar-right-actions {
+    display: none !important;
+  }
+
+  .nav-links {
+    display: none !important;
+  }
+}
+
+/* ================================
+   Animated Feature Cards
+   ================================ */
+
+.feature-container {
+  perspective: 1000px;
+}
+
+.feature-card {
+  --border-opacity: 0.6;
+  position: relative;
+  background: rgba(10, 10, 20, 0.8);
+  border-radius: 20px;
+  padding: 40px 30px;
+  transform-style: preserve-3d;
+  transition: box-shadow 0.3s ease;
+  overflow: hidden;
+  will-change: transform;
+}
+
+/* Animated gradient border */
+.feature-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  padding: 2px;
+  background: linear-gradient(
+    135deg,
+    var(--card-color-1) 0%,
+    transparent 50%,
+    var(--card-color-2) 100%
+  );
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: var(--border-opacity);
+  transition: opacity 0.3s ease;
+}
+
+/* Animated border sweep */
+.feature-card::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: 22px;
+  background: conic-gradient(
+    from var(--angle, 0deg),
+    transparent 0%,
+    var(--card-color-1) 10%,
+    var(--card-color-2) 20%,
+    transparent 30%
+  );
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  padding: 2px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  animation: borderRotate 4s linear infinite;
+}
+
+.feature-card:hover::after {
+  opacity: 0.8;
+}
+
+@keyframes borderRotate {
+  0% { --angle: 0deg; }
+  100% { --angle: 360deg; }
+}
+
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+/* Card color variants */
+.feature-card.cyan {
+  --card-color-1: #00F0FF;
+  --card-color-2: #2962FF;
+}
+
+.feature-card.yellow {
+  --card-color-1: #FFB800;
+  --card-color-2: #FF9100;
+}
+
+.feature-card.purple {
+  --card-color-1: #fb55ab;
+  --card-color-2: #c42878;
+}
+
+/* Glow effect */
+.feature-card-glow {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  opacity: 0.4;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.feature-card-glow.cyan {
+  background: radial-gradient(circle at center, rgba(0, 240, 255, 0.15) 0%, transparent 50%);
+}
+
+.feature-card-glow.yellow {
+  background: radial-gradient(circle at center, rgba(255, 184, 0, 0.15) 0%, transparent 50%);
+}
+
+.feature-card-glow.purple {
+  background: radial-gradient(circle at center, rgba(99, 102, 241, 0.15) 0%, transparent 50%);
+}
+
+/* Icon container */
+.feature-icon-container {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+.feature-icon {
+  width: 60px;
+  height: 60px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.feature-card:hover .feature-icon {
+  filter: drop-shadow(0 0 20px var(--card-color-1));
+}
+
+/* Icon colors */
+.cyan-icon {
+  color: #00F0FF;
+}
+
+.yellow-icon {
+  color: #FFB800;
+}
+
+.purple-icon {
+  color: #c42878;
+}
+
+/* Card content */
+.feature-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 12px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.feature-description {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* Hover state enhancements */
+.feature-card:hover {
+  box-shadow: 
+    0 25px 50px -12px rgba(0, 0, 0, 0.5),
+    0 0 40px -10px var(--card-color-1);
+}
+
+.feature-card:hover .feature-title {
+  text-shadow: 0 0 20px var(--card-color-1);
+}
+
+/* Shimmer effect on hover */
+.feature-card:hover::before {
+  opacity: 1;
+  animation: shimmer 2s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Particle effect container */
+.feature-card .particles {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  border-radius: 20px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .feature-card {
+    padding: 30px 20px;
+  }
+  
+  .feature-icon-container {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .feature-icon {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .feature-title {
+    font-size: 1.25rem;
+  }
+}
